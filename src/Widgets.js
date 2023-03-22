@@ -1,12 +1,14 @@
 import React from 'react'
 import "./Widgets.css";
 import InfoIcon from '@mui/icons-material/Info';
+import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 
 function Widgets() {
 
-    const newsArticle = (heading, subtitle) => {
+    const newsArticle = (heading, subtitle) => (
         <div className='widgets__article'>
         <div className='widgets__articleLeft'>
+        <FiberManualRecordIcon />
 
         </div>
         <div className='widgets__articleRight'>
@@ -16,7 +18,7 @@ function Widgets() {
         </div>
 
         </div>
-    }
+    )
 
     return (
     <div  className='widgets'> 
@@ -25,8 +27,13 @@ function Widgets() {
     <InfoIcon />
 
     </div>
+    {newsArticle("React is back", "Apply for the jobs")}
+    {newsArticle("Systems job updates","React Developer")}
+    {newsArticle("Remote jobs","React Developer")}
+    {newsArticle("Onsite jobs","MERN stack")}
+    {newsArticle("Hybrid jobs","Next.js")}
     </div> 
-    )
-}
+    );
+};
 
-export default Widgets
+export default Widgets;
